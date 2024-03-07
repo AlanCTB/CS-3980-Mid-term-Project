@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calendar Planner (Work in Progress)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Calendar Planner (Work in Progress)</h1>
+    <form id="todoForm">
+        <input type="text" id="title" placeholder="Title" required>
+        <input type="text" id="description" placeholder="Description">
+        <input type="number" id="priority" placeholder="Priority" required>
+        <input type="checkbox" id="isRecurring"> Recurring
+        <input type="date" id="dueDate" name="dueDate" required>
+        <button type="submit">Add Todo</button>
+    </form>
+    <div id="calendar"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

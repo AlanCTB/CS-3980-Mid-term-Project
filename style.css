@@ -1,0 +1,14 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#todoForm {
+    margin-bottom: 20px;
+}
+
+#calendar {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* Adjust based on your calendar design */
+    gap: 10px;
+}
