@@ -2,13 +2,207 @@ body {
     font-family: Arial, sans-serif;
 }
 
-#todoForm {
-    margin-bottom: 20px;
+.title-container {
+    text-align: center; 
+    margin-bottom: 20px; 
 }
 
+h1 {
+    font-size: 36px; 
+    margin-bottom: 0; 
+}
+
+.author {
+    font-size: 18px; 
+    color: #666; 
+}
+
+#todoForm label {
+    display: block; 
+    margin-top: 10px;
+}
+
+#todoForm button[type="submit"] {
+    background-color: #4CAF50; 
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+#todoForm button[type="submit"]:hover {
+    background-color: #45a049; 
+}
+
+#monthNavigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px; 
+    margin-top: 20px; 
+}
+
+#monthNavigation button {
+    background-color: #4CAF50; 
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    margin: 0 10px; 
+    font-size: 16px; 
+    border-radius: 5px; 
+}
+
+#monthNavigation button:hover {
+    background-color: #45a049; 
+}
+
+#monthNavigation #currentMonth {
+    font-weight: bold;
+}
 #calendar {
-    margin-top: 20px;
     display: grid;
-    grid-template-columns: repeat(7, 1fr); /* Adjust based on your calendar design */
-    gap: 10px;
+    grid-template-columns: repeat(7, 1fr); /* 7 columns for days of the week */
+    gap: 5px; /* Space between each day */
+    padding: 10px;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+}
+
+#calendar > div {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 20px 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#calendar > div:empty {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.day-not-current-month {
+    background-color: #e0e0e0;
+}
+
+.current-day {
+    border: 2px solid #4CAF50; 
+}
+
+#weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    padding: 0 10px;
+    margin-bottom: 5px;
+}
+
+.weekday {
+    text-align: center;
+    font-weight: bold;
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+#todoForm {
+    max-width: 500px; 
+    background-color: #f4f4f4; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    margin: auto; 
+}
+
+#todoForm input[type="text"],
+#todoForm input[type="date"],
+#todoForm input[type="number"] {
+    width: 100%; 
+    padding: 10px;
+    margin: 8px 0; 
+    display: inline-block;
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+}
+
+#todoForm textarea#description {
+    width: 100%; 
+    padding: 10px;
+    margin: 8px 0; 
+    display: inline-block;
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    resize: vertical; 
+    height: auto; 
+    min-height: 150px; 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 4% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    max-width: 600px; 
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#myBtn, #clearEventsBtn {
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 15px 30px; 
+    margin: 10px; 
+    font-size: 20px; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); 
+}
+
+#clearEventsBtn {
+    background-color:red;
+}
+
+#myBtn:hover, #clearEventsBtn:hover {
+    background-color: #45a049; 
+}
+
+.priority-high {
+    background-color: lightcoral;
+}
+
+.priority-medium {
+    background-color: yellow;
+}
+
+.priority-low {
+    background-color: green;
 }

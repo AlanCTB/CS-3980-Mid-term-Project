@@ -2,21 +2,66 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Calendar Planner (Work in Progress)</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
-    <h1>Calendar Planner (Work in Progress)</h1>
-    <form id="todoForm">
-        <input type="text" id="title" placeholder="Title" required>
-        <input type="text" id="description" placeholder="Description">
-        <input type="number" id="priority" placeholder="Priority" required>
-        <input type="checkbox" id="isRecurring"> Recurring
-        <input type="date" id="dueDate" name="dueDate" required>
-        <button type="submit">Add Todo</button>
-    </form>
-    <div id="calendar"></div>
+    <div class="title-container">
+        <h1>Calendar Planner</h1>
+        <p class="author">Created by Alan Chen</p>
+    </div>
 
-    <script src="script.js"></script>
+<!-- Button to open the todo form popup -->
+<button id="myBtn">Add Todo</button>
+
+<!--Buttom to clear all events from Todo-->
+<button id="clearEventsBtn">Clear All Events</button>
+
+<!-- The Modal for adding todos -->
+<div id="todoFormPopup" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <form id="todoForm">
+            <input type="text" id="title" placeholder="Title" required><br>
+            <textarea id="description" placeholder="Description" rows="5"></textarea><br>
+            <select id="priority" required>
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+            </select><br>
+            <label><input type="checkbox" id="isRecurring"> Recurring</label><br>
+            <input type="date" id="dueDate" name="dueDate" required><br>
+            <button type="submit">Add Todo</button>
+        </form>
+    </div>
+</div>
+
+<!-- Month Navigation -->
+<div id="monthNavigation">
+    <button id="prevMonth">&#10094;</button>
+    <span id="currentMonth"></span>
+    <button id="nextMonth">&#10095;</button>
+</div>
+
+<!-- Calendar Display -->
+<div id="weekdays">
+    <div class="weekday">Sun</div>
+    <div class="weekday">Mon</div>
+    <div class="weekday">Tue</div>
+    <div class="weekday">Wed</div>
+    <div class="weekday">Thu</div>
+    <div class="weekday">Fri</div>
+    <div class="weekday">Sat</div>
+</div>
+<div id="calendar"></div>
+
+<!-- The Modal for showing event descriptions -->
+<div id="eventDescriptionPopup" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id="eventDescription"></p>
+        <button id="removeItemBtn">Remove</button>
+    </div>
+</div>
 </body>
 </html>
