@@ -1,13 +1,12 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi import Body
 from typing import List
 from pydantic import BaseModel, Field
 from datetime import date
 from enum import Enum
 import uuid
-
 app = FastAPI()
-
 # CORS setup for development.
 app.add_middleware(
     CORSMiddleware,
@@ -39,8 +38,16 @@ async def read_todo_items():
 
 @app.post("/items/", response_model=TodoItem)
 async def create_todo_item(item: TodoItem):
-    todo_items.append()
+    todo_items.append(item.dict())
     return item
+
+@app.put("/items/{item_id}", response_model=TodoItem)
+async def update_todo_item(item_id: str, item: TodoItem):
+    for index, existing_item in enumerate(todo_items):
+        if existing_item['id'] == item_id:
+            todo_items[index] = item.dict()
+            return item
+    raise HTTPException(status_code=404, detail="Item not found")
 
 @app.delete("/items/{item_id}", response_model=TodoItem)
 async def delete_todo_item(item_id: str):
