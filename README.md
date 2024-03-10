@@ -21,10 +21,10 @@ uvicorn main:app --
 #### Calendar Planner App Overview
 ##### Description
 The Calendar Planner App is a tool designed to help users efficiently manage their events. With a sleek and user-friendly interface, the app offers several key features, including: <br>
-Event Creation: Users can easily add new events, specifying details such as title, description, and priority, and also have the ability to do recurring events<br>
-Recurring Events: For events that occur regularly, the app provides an option to set them as recurring. This feature ensures that users don't have to manually enter the same event multiple times.<br>
-Dynamic Calendar Display: The app's calendar automatically defaults to the current month, allowing users to navigate through past and future months with the pervious and next month buttons.<br>
-Accurate Date Calculations: With the use of thetime module, the app accurately calculates the number of days in each month and the corresponding day of the week. This precision ensures that events are always associated with the correct date on the calendar.<br>
+**Event Creation**: Users can easily add new events, specifying details such as title, description, and priority, and also have the ability to do recurring events<br>
+**Recurring Events**: For events that occur regularly, the app provides an option to set them as recurring. This feature ensures that users don't have to manually enter the same event multiple times.<br>
+**Dynamic Calendar Display**: The app's calendar automatically defaults to the current month, allowing users to navigate through past and future months with the pervious and next month buttons.<br>
+**Accurate Date Calculations**: With the use of thetime module, the app accurately calculates the number of days in each month and the corresponding day of the week. This precision ensures that events are always associated with the correct date on the calendar.<br>
 
 #### Visuals
 ##### Calendar with no events:
