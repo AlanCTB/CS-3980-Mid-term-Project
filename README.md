@@ -18,15 +18,16 @@ uvicorn main:app --
 ```
 ### Calendar Planner App Description and Images
 #### Calendar with no events:
-
+![Calendar](Example Pictures/Calendar.png)
 
 #### Empty todo form:
-
+![todo](Example Pictures/Todo.png)
 
 #### Calendar and todo form with example events:
-
+![TodoExample](Example Pictures/Example Todo.png)
+![CalendarEvent](Example Pictures/CalendarEvent.png)
 
 #### Calendar with example recurring event:
-
+!(CalendarRe)[Example Pictures/ExampleRe.png)
 
 
