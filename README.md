@@ -18,9 +18,9 @@ uvicorn main:app --port 8000 --reload
 uvicorn main:app --
 ```
 ### 2.Calendar Planner App Description and Images
-This calendar Planner App that I created have the function to create a new event with a title, description, priority and the option to do recurring events.
-The month of the calendar is defaulted to the current month and have the option to go to pervious and next month with the buttons.
-The amount of days and day of the week is correctly calculated with the equations with the use of the time module. 
+This calendar Planner App that I created have the function to create a new event with a title, description, priority and the option to do recurring events.<br>
+The month of the calendar is defaulted to the current month and have the option to go to pervious and next month with the buttons.<br>
+The amount of days and day of the week is correctly calculated with the equations with the use of the time module. <br> 
 Those information is than correctly displayed on the calander. 
 
 #### Calendar with no events:
