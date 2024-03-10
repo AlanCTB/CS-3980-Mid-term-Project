@@ -24,10 +24,10 @@ uvicorn main:app --
 ![todo](ExamplePic/Todo.png)
 
 #### Calendar and todo form with example events:
-![TodoExample](ExamplePic/Example Todo.png)
+![TodoExample](ExamplePic/ExampleTodo.png)
 ![CalendarEvent](ExamplePic/CalendarEvent.png)
 
 #### Calendar with example recurring event:
-!(CalendarRe)[ExamplePic/ExampleRe.png)
+![CalendarRe](ExamplePic/ExampleRe.png)
 
 
